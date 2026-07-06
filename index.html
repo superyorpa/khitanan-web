@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=412, initial-scale=1.0" />
+  <title>Undangan Khitanan - Naufal Afkar</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&family=Karma:wght@500&family=Imperial+Script&display=swap"
+    rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background: #e5e5e5;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .imperial {
+      font-family: "Imperial Script", cursive;
+    }
+
+    .karma {
+      font-family: "Karma", serif;
+    }
+
+    .dm {
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .instrument {
+      font-family: "Instrument Sans", sans-serif;
+      font-weight: 600;
+    }
+
+    .btn-khitan {
+      background-color: #dd7b00;
+      transition: all 0.2s ease;
+    }
+
+    .btn-khitan:hover {
+      background-color: #c86e00;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .transition-page {
+      transition: all 0.6s ease;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    .fade-in-page {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .detail-init {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="w-[412px]">
+    <!-- cover page -->
+    <div id="cover" class="w-[412px] h-[832px] relative overflow-hidden bg-white">
+      <!-- bg -->
+      <img src="assets/images/bg.png" class="absolute inset-0 w-full h-full object-cover z-0" />
+
+      <!-- ornament -->
+      <img src="assets/images/ornament4.png"
+        class="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none" />
+
+      <!-- content -->
+      <div class="relative z-20 flex flex-col items-center text-center px-6 pt-[110px] fade-in">
+
+        <h1 class="imperial text-[45px] text-[#DD7B00] leading-none mt-16">
+          Walimatul Khitan
+        </h1>
+
+        <p class="dm text-[13px] mt-[8px] text-[#000000] leading-relaxed">
+          Dengan memohon rahmat dan ridha Allah SWT, kami mengundang
+          Bapak/Ibu/Saudara/i untuk menghadiri acara tasyakuran khitan putra
+          kami.
+        </p>
+
+
+        <img src="assets/images/profpic.png" class="w-[236px] h-[236px] mt-[23px] object-contain" />
+
+        <h2 class="karma text-[40px] text-[#535353] mt-[23px]">
+          Naufal Afkar
+        </h2>
+
+        <p class="dm text-[17px] text-[#DD7B00] mt-[-10px]">
+          Putra dari Tn. Haryadin & Ny. Nurul Dewi
+        </p>
+
+        <button onclick="openInvitation()"
+          class="btn-khitan instrument w-[206px] h-[46px] rounded-[10px] text-white text-[20px] shadow-lg active:scale-95 mt-[30px]">
+          Buka Undangan
+        </button>
+      </div>
+    </div>
+
+    <!-- detail page -->
+    <div id="detail"
+      class="hidden w-[412px] min-h-[832px] relative overflow-y-auto bg-white transition-page detail-init">
+      <!-- bg -->
+      <img src="assets/images/bg.png" class="absolute top-0 w-full h-full object-cover z-0" />
+
+      <!-- ornament -->
+      <img src="assets/images/ornament4.png"
+        class="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none" />
+
+      <!-- content -->
+      <div class="relative z-20 flex flex-col items-center text-center px-6 pt-[110px]">
+        <p class="text-[#DD7B00] text-[20px] leading-relaxed mt-16">
+          السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
+        </p>
+
+        <p class="dm text-[13px] text-black mt-[16px] leading-relaxed">
+          Dengan memohon rahmat, ridha, dan karunia Allah SWT, kami sekeluarga
+          bermaksud menyelenggarakan acara Tasyakuran Khitan putra kami:
+        </p>
+
+        <h1 class="karma text-[40px] text-[#DD7B00] mt-5">Naufal Afkar</h1>
+
+        <p class="dm text-[17px] text-gray-600 mt-[-10px]">
+          Putra dari Tn. Haryadin & Ny. Nurul Dewi
+        </p>
+
+        <div class="mt-6 w-full flex flex-col items-center">
+          <p class="dm text-[14px] text-[#535353] text-center mt-[-8px] mb-[10px]">
+            Yang Insya Allah acara akan dilaksanakan pada:
+          </p>
+
+          <!-- MAIN ROW -->
+          <div class="flex items-center justify-center gap-4">
+            <!-- left info -->
+            <div class="text-center leading-tight">
+              <p class="karma text-[17px]">Sabtu</p>
+              <p class="karma text-[#DD7B00] text-[44px] font-bold leading-none">
+                11
+              </p>
+              <p class="karma text-[17px]">Juli 2026</p>
+            </div>
+
+            <!-- garis -->
+            <div class="w-[2px] h-[80px] bg-[#535353]"></div>
+
+            <!-- right info -->
+            <div class="flex flex-col gap-3 text-left">
+              <!-- time -->
+              <div class="flex items-start gap-2">
+                <svg class="mt-[2px]" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_12_88" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16"
+                    height="16">
+                    <path d="M15.5 0.5V15.5H0.5V0.5H15.5Z" fill="white" stroke="white" />
+                  </mask>
+                  <g mask="url(#mask0_12_88)">
+                    <path
+                      d="M13.8334 8.83333C13.8334 12.0533 11.2201 14.6667 8.00008 14.6667C4.78008 14.6667 2.16675 12.0533 2.16675 8.83333C2.16675 5.61333 4.78008 3 8.00008 3C11.2201 3 13.8334 5.61333 13.8334 8.83333Z"
+                      stroke="#DD7B00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8 5.33337V8.66671" stroke="#DD7B00" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6 1.33337H10" stroke="#DD7B00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="karma text-[12px] text-[#535353] mt-[2px]">
+                  09.00 WIB s/d Selesai
+                </p>
+              </div>
+
+              <!-- address -->
+              <div class="flex items-start gap-2">
+                <svg class="mt-[2px]" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                  <path d="M8 9.5a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z" stroke="#DD7B00" stroke-width="1.5" />
+                  <path
+                    d="M2.4 6.1C3.7 0 12.3 0 13.6 6.1c.8 3.6-1.3 6.6-3.2 8.5-1.3 1.4-3.4 1.4-4.7 0-1.9-1.9-4-4.9-3.3-8.5Z"
+                    stroke="#DD7B00" stroke-width="1.5" />
+                </svg>
+
+                <p class="karma text-[12px] text-[#535353] leading-relaxed">
+                  Kp. Duri Kosambi RT.003/RW.014<br />
+                  Kel. Duri Kosambi, Kec. Cengkareng<br />
+                  Jakarta Barat
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="dm text-[13px] mt-[22px] text-black">
+          Merupakan suatu kehormatan bagi kami apabila <br />
+          Bapak/Ibu/Saudara/i berkenan hadir. <br />
+          Terima kasih atas doa dan kehadirannya.
+        </p>
+
+        <p class="text-[#DD7B00] text-[20px] mt-[10px]">
+          وَالسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
+        </p>
+
+        <!-- buttons -->
+        <div class="flex gap-4 mt-[14px] relative">
+          <div class="relative">
+            <!-- send gift button -->
+            <button onclick="toggleGift()"
+              class="btn-khitan instrument w-[100px] h-[40px] text-[16px] text-white rounded-[10px]">
+              Send Gift
+            </button>
+
+            <!-- rekening box -->
+            <div id="giftBox"
+              class="hidden absolute left-0 top-[44px] w-[150px] bg-[#DD7B00] text-white rounded-[14px] shadow-lg z-50">
+              <div class="p-3 space-y-3 text-left">
+                <!-- bank 1 -->
+                <div class="flex justify-between items-start">
+                  <div class="leading-tight">
+                    <p class="instrument text-[12px] font-semibold">
+                      Bank Mandiri
+                    </p>
+                    <p class="instrument text-[10px]">1180012824578</p>
+                    <p class="instrument text-[8px] font-medium">
+                      NURUL DEWI M KUSUMAW
+                    </p>
+                  </div>
+
+                  <button onclick="copyRek('1180012824578')" class="text-white shrink-0 mt-[2px]">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_17_227" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                        width="16" height="16">
+                        <path d="M16 0H0V16H16V0Z" fill="white" />
+                      </mask>
+                      <g mask="url(#mask0_17_227)">
+                        <path d="M1.33331 8.39996C1.33331 5.73329 2.39998 4.66663 5.06665 4.66663H7.06665"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M11.3333 8.93359V10.9336C11.3333 13.6003 10.2666 14.6669 7.59998 14.6669H5.06665C2.39998 14.6669 1.33331 13.6003 1.33331 10.9336"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M9.20004 8.93329C7.60005 8.93329 7.06671 8.39996 7.06671 6.79996V4.66663L11.3334 8.93329"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M7.7334 1.33337H10.4001" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M4.66666 3.33337C4.66666 2.22671 5.55999 1.33337 6.66666 1.33337H8.41332"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.6666 5.33337V9.46004C14.6666 10.4934 13.8266 11.3334 12.7933 11.3334"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M14.6667 5.33337H12.6667C11.1667 5.33337 10.6667 4.83337 10.6667 3.33337V1.33337L14.6667 5.33337Z"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- bank 2 -->
+                <div class="flex justify-between items-start">
+                  <div class="leading-tight">
+                    <p class="instrument text-[12px] font-semibold">
+                      Bank BRI
+                    </p>
+                    <p class="instrument text-[10px]">042001019082506</p>
+                    <p class="instrument text-[8px] font-medium">
+                      NURUL DEWI M KUSUMAW
+                    </p>
+                  </div>
+
+                  <button onclick="copyRek('042001019082506')" class="text-white shrink-0 mt-[2px]">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_17_227" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                        width="16" height="16">
+                        <path d="M16 0H0V16H16V0Z" fill="white" />
+                      </mask>
+                      <g mask="url(#mask0_17_227)">
+                        <path d="M1.33331 8.39996C1.33331 5.73329 2.39998 4.66663 5.06665 4.66663H7.06665"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M11.3333 8.93359V10.9336C11.3333 13.6003 10.2666 14.6669 7.59998 14.6669H5.06665C2.39998 14.6669 1.33331 13.6003 1.33331 10.9336"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M9.20004 8.93329C7.60005 8.93329 7.06671 8.39996 7.06671 6.79996V4.66663L11.3334 8.93329"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M7.7334 1.33337H10.4001" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M4.66666 3.33337C4.66666 2.22671 5.55999 1.33337 6.66666 1.33337H8.41332"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.6666 5.33337V9.46004C14.6666 10.4934 13.8266 11.3334 12.7933 11.3334"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M14.6667 5.33337H12.6667C11.1667 5.33337 10.6667 4.83337 10.6667 3.33337V1.33337L14.6667 5.33337Z"
+                          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- show map button -->
+          <button onclick="openLocation()"
+            class="btn-khitan instrument w-[100px] h-[40px] text-[16px] text-white rounded-[10px]">
+            Show Map
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- gallery page -->
+    <div id="gallery" class="hidden w-[412px] h-[650px] mt-[-2.2px] relative overflow-hidden">
+      <!-- bg -->
+      <img src="assets/images/bg.png" class="absolute top-0 w-full h-full object-cover z-0" />
+
+      <!-- ornament -->
+      <img src="assets/images/ornament4-2.png"
+        class="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none" />
+
+      <!-- content -->
+      <div class="relative z-20 flex flex-col items-center pt-10 px-6">
+        <h2 class="imperial text-[40px] text-[#DD7B00] mt-[50px]">
+          Galeri Kenangan
+        </h2>
+
+        <div class="mt-[33px]">
+          <img src="assets/images/gallery2.png" width="331px" height="329px" />
+        </div>
+      </div>
+    </div>
+
+    <!-- location page -->
+    <div id="location" class="hidden fixed inset-0 bg-black/40 z-50 flex items-center justify-center overflow-hidden">
+
+      <div class="w-full max-w-[412px] h-screen relative overflow-hidden mx-auto">
+
+        <!-- bg -->
+        <img src="assets/images/bg.png" class="absolute inset-0 w-full h-full object-cover z-0" />
+
+        <!-- ornament -->
+        <img src="assets/images/ornament4.png"
+          class="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none" />
+
+        <!-- content -->
+        <div class="relative z-20 flex flex-col items-center text-center px-6 pt-[235px]">
+
+          <h1 class="dm text-[20px] font-bold text-black mb-6">
+            Lokasi Acara
+          </h1>
+
+          <div class="bg-white p-4 rounded-[20px] shadow-lg">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://maps.app.goo.gl/ngt8PBUNKjxku7zu5"
+              class="w-[220px] h-[220px]" />
+          </div>
+
+          <p class="dm text-[16px] font-normal text-black mt-6 leading-relaxed">
+            Silakan pindai QR Code di atas<br />
+            untuk membuka petunjuk lokasi acara<br />
+            melalui Google Maps.
+          </p>
+
+          <button onclick="closeLocation()"
+            class="instrument mt-10 bg-[#DD7B00] text-white w-[180px] h-[46px] rounded-[12px] text-[18px]">
+            Kembali
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- alert buat copas rekening -->
+    <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 hidden
+      bg-green-700 text-white px-4 py-2 rounded-[10px] text-[14px]
+      shadow-lg z-50 transition-all">
+    </div>
+
+    <!-- wa button -->
+    <div id="waButton" class="fixed bottom-5 right-4 z-[999]">
+
+      <!-- close wa button -->
+      <button onclick="closeWa()"
+        class="absolute -top-2 -right-2 w-[22px] h-[22px] bg-red-500 text-white text-[14px] rounded-full flex items-center justify-center shadow-md">
+        ×
+      </button>
+
+      <a href="https://wa.me/6281511755559?text=Halo%20saya%20mau%20dibuatin%20website%20juga%20dong" target="_blank"
+        class="w-[55px] h-[55px] bg-green-500 hover:bg-green-600 rounded-full shadow-lg flex items-center justify-center transition-all active:scale-95">
+
+        <svg width="40" height="30" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M18.5986 3.17871C16.5527 1.12793 13.8281 0 10.9326 0C4.95605 0 0.0927734 4.86328 0.0927734 10.8398C0.0927734 12.749 0.59082 14.6143 1.53809 16.2598L0 21.875L5.74707 20.3662C7.3291 21.2305 9.11133 21.6846 10.9277 21.6846H10.9326C16.9043 21.6846 21.875 16.8213 21.875 10.8447C21.875 7.94922 20.6445 5.22949 18.5986 3.17871ZM10.9326 19.8584C9.31152 19.8584 7.72461 19.4238 6.34277 18.6035L6.01562 18.4082L2.60742 19.3018L3.51562 15.9766L3.30078 15.6348C2.39746 14.1992 1.92383 12.5439 1.92383 10.8398C1.92383 5.87402 5.9668 1.83105 10.9375 1.83105C13.3447 1.83105 15.6055 2.76855 17.3047 4.47266C19.0039 6.17676 20.0488 8.4375 20.0439 10.8447C20.0439 15.8154 15.8984 19.8584 10.9326 19.8584ZM15.874 13.1104C15.6055 12.9736 14.2725 12.3193 14.0234 12.2314C13.7744 12.1387 13.5938 12.0947 13.4131 12.3682C13.2324 12.6416 12.7148 13.2471 12.5537 13.4326C12.3975 13.6133 12.2363 13.6377 11.9678 13.501C10.376 12.7051 9.33105 12.0801 8.28125 10.2783C8.00293 9.7998 8.55957 9.83398 9.07715 8.79883C9.16504 8.61816 9.12109 8.46191 9.05273 8.3252C8.98437 8.18848 8.44238 6.85547 8.21777 6.31348C7.99805 5.78613 7.77344 5.85938 7.60742 5.84961C7.45117 5.83984 7.27051 5.83984 7.08984 5.83984C6.90918 5.83984 6.61621 5.9082 6.36719 6.17676C6.11816 6.4502 5.41992 7.10449 5.41992 8.4375C5.41992 9.77051 6.3916 11.0596 6.52344 11.2402C6.66016 11.4209 8.43262 14.1553 11.1523 15.332C12.8711 16.0742 13.5449 16.1377 14.4043 16.0107C14.9268 15.9326 16.0059 15.3564 16.2305 14.7217C16.4551 14.0869 16.4551 13.5449 16.3867 13.4326C16.3232 13.3105 16.1426 13.2422 15.874 13.1104Z"
+            fill="white" />
+        </svg>
+      </a>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
