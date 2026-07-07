@@ -1,4 +1,6 @@
 function openInvitation() {
+  const music = document.getElementById("bgMusic");
+  music.play().catch(() => {});
   const cover = document.getElementById("cover");
   const detail = document.getElementById("detail");
   const gallery = document.getElementById("gallery");
