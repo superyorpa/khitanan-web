@@ -92,6 +92,79 @@
     body.no-scroll {
       overflow: hidden;
     }
+
+    .title-animation {
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .title-animation2 {
+      animation: slideLeft 2s ease forwards;
+    }
+
+    @keyframes slideLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .photo-animation {
+      animation: zoomIn 1.2s ease forwards;
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .detail-item {
+      opacity: 0;
+      transform: translateY(25px);
+      animation: detailShow 0.8s ease forwards;
+    }
+
+    .detail-delay-1 {
+      animation-delay: 0.2s;
+    }
+
+    .detail-delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    .detail-delay-3 {
+      animation-delay: 0.6s;
+    }
+
+    .detail-delay-4 {
+      animation-delay: 0.8s;
+    }
+
+
+    @keyframes detailShow {
+
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
   </style>
 </head>
 
@@ -109,7 +182,7 @@
       <!-- content -->
       <div class="relative z-20 flex flex-col items-center text-center px-6 pt-[110px] fade-in">
 
-        <h1 class="imperial text-[45px] text-[#DD7B00] leading-none mt-16">
+        <h1 class="imperial text-[45px] text-[#DD7B00] leading-none mt-16 title-animation">
           Walimatul Khitan
         </h1>
 
@@ -120,7 +193,7 @@
         </p>
 
 
-        <img src="assets/images/profpic.png" class="w-[236px] h-[236px] mt-[23px] object-contain" />
+        <img src="assets/images/profpic.png" class="w-[236px] h-[236px] mt-[23px] object-contain photo-animation" />
 
         <h2 class="karma text-[40px] text-[#535353] mt-[23px]">
           Naufal Afkar
@@ -149,28 +222,28 @@
 
       <!-- content -->
       <div class="relative z-20 flex flex-col items-center text-center px-6 pt-[110px]">
-        <p class="text-[#DD7B00] text-[20px] leading-relaxed mt-16">
+        <p class="text-[#DD7B00] text-[20px] leading-relaxed mt-16 detail-item">
           السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
         </p>
 
-        <p class="dm text-[13px] text-black mt-[16px] leading-relaxed">
+        <p class="dm text-[13px] text-black mt-[16px] leading-relaxed detail-item detail-delay-1">
           Dengan memohon rahmat, ridha, dan karunia Allah SWT, kami sekeluarga
           bermaksud menyelenggarakan acara Tasyakuran Khitan putra kami:
         </p>
 
-        <h1 class="karma text-[40px] text-[#DD7B00] mt-5">Naufal Afkar</h1>
+        <h1 class="karma text-[40px] text-[#DD7B00] mt-5 detail-item detail-delay-2">Naufal Afkar</h1>
 
-        <p class="dm text-[17px] text-gray-600 mt-[-10px]">
+        <p class="dm text-[17px] text-gray-600 mt-[-10px] detail-item detail-delay-2">
           Putra dari Tn. Haryadin & Ny. Nurul Dewi
         </p>
 
         <div class="mt-6 w-full flex flex-col items-center">
-          <p class="dm text-[14px] text-[#535353] text-center mt-[-8px] mb-[10px]">
+          <p class="dm text-[14px] text-[#535353] text-center mt-[-8px] mb-[10px] detail-item detail-delay-2">
             Yang Insya Allah acara akan dilaksanakan pada:
           </p>
 
           <!-- MAIN ROW -->
-          <div class="flex items-center justify-center gap-4">
+          <div class="flex items-center justify-center gap-4 detail-item detail-delay-3">
             <!-- left info -->
             <div class="text-center leading-tight">
               <p class="karma text-[17px]">Sabtu</p>
@@ -228,7 +301,7 @@
           </div>
         </div>
 
-        <p class="dm text-[13px] mt-[22px] text-black">
+        <p class="dm text-[13px] mt-[22px] text-black detail-item detail-delay-3">
           Merupakan suatu kehormatan bagi kami apabila <br />
           Bapak/Ibu/Saudara/i berkenan hadir. <br />
           Terima kasih atas doa dan kehadirannya.
@@ -239,7 +312,7 @@
         </p>
 
         <!-- buttons -->
-        <div class="flex gap-4 mt-[14px] relative">
+        <div class="flex gap-4 mt-[14px] relative detail-item detail-delay-4">
           <div class="relative">
             <!-- send gift button -->
             <button onclick="toggleGift()"
@@ -355,7 +428,7 @@
         class="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none" />
 
       <!-- content -->
-      <div class="relative z-20 flex flex-col items-center pt-10 px-6">
+      <div class="relative z-20 flex flex-col items-center pt-10 px-6 title-animation">
         <h2 class="imperial text-[40px] text-[#DD7B00] mt-[50px]">
           Galeri Kenangan
         </h2>
@@ -432,9 +505,10 @@
     </div>
 
     <audio id="bgMusic" loop>
-     <source src="assets/mz-tya.mp3" type="audio/mpeg" />
+      <<<<<<< HEAD <source src="assets/mz-tya.mp3" type="audio/mpeg" />
     </audio>
-    
+
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
